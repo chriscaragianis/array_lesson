@@ -8,7 +8,8 @@ class ArrayTest {
     //Print an array variable
     //Print an array with a loop
     //"Spooky action at a distance"
-    //Passing by value and passing by reference
+    //Passing by value and passing by reference:
+    //    changing the array to all -5s
   }
 
   //Changing a primitive type in a method
