@@ -2,7 +2,7 @@ class ArrayTest {
 
   public static void main(String[] args) {
     //Declare 2 array variables
-    int[] myArray;
+  /*  int[] myArray;
     int[] myOtherArray = {2, 3, 5, 7, 11};
 
     //Initialize one using 'new'
@@ -28,8 +28,13 @@ class ArrayTest {
       System.out.print(v + ", ");
     }
     //"Spooky action at a distance"
+*/
     //Passing by value and passing by reference:
     //    changing the array to all -5s
+    int myInt = 0;
+    System.out.println("myInt = " + myInt);
+    intChanger(myInt);
+    System.out.println("myInt = " + myInt);
   }
 
   //Changing a primitive type in a method
