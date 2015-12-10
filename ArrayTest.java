@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class ArrayTest {
 
   public static void main(String[] args) {
@@ -33,19 +35,30 @@ class ArrayTest {
     //    changing the array to all -5s
     int myInt = 0;
     System.out.println("myInt = " + myInt);
-    intChanger(myInt);
-    System.out.println("myInt = " + myInt);
+      myInt = otherIntChanger(myInt);
+    System.out.println("myInt = " + myInt + "\n\n");
+
+    int[] myArray = {1,2,3};
+    System.out.println(Arrays.toString(myArray));
+    myArray = goodArrayChanger(myArray);
+    System.out.println(Arrays.toString(myArray));
+
   }
 
   //Changing a primitive type in a method
   public static void intChanger(int input) {
-    input = -5;
+    input += -5;
+  }
+
+  public static int otherIntChanger(int input) {
+    input += -5;
+    return input;
   }
 
   //A bad method with several problems
   public static void arrayChanger(int[] input) {
     for (int i = 0; i < input.length; i++) {
-      input[i] = -5;
+      input[i] += -5;
     }
   }
 
@@ -53,7 +66,7 @@ class ArrayTest {
   public static int[] goodArrayChanger(int[] input) {
     int[] output = new int[input.length];
     for (int i = 0; i < input.length; i++) {
-      output[i] = -5;
+      output[i] = input[i] - 5;
     }
     return output;
   }
